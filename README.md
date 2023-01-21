@@ -1,6 +1,6 @@
 # Currency-Converter
 ## 1. Description
-This script has as its objective to offer a pack of functions to work with Dollar, so it can be easily imported into your projects.
+This script has as its objective to offer a pack of functions to work with Dollar, so it can be easily imported into your projects.The values are extracted from the Brazilian Central Bank’s page.
 ## 2. Installation
 This script is very easy to import, first, is necessary to move it to the directory of your project, after,  you should install all dependencies necessary, for last, is just use the Import statement.
 <br> Example:
