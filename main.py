@@ -59,7 +59,7 @@ class Dolar:
 
     def convert_Reais_in_dollars(self, reais):
         try:
-            conversion = reais * self.values[1]
+            conversion = reais / self.values[1]
             return conversion
         except IndexError:
             return
