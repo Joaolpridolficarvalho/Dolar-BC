@@ -1,0 +1,11 @@
+version: '2.13'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command:  PATH="/usr/local/bin:$PATH"
+
+    command: python Dolar-BC.py
+    volumes:
+      - .:/app
