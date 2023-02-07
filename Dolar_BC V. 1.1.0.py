@@ -28,7 +28,7 @@ class USD:
 
     def access_url(self):
         try:
-            page = requests.post(self.url, data=self.date_interval)
+            page = requests.post(self.url, data = self.date_interval)
             self.analytic_page = BeautifulSoup(page.content, 'html.parser')
             return page
         except:
@@ -70,8 +70,8 @@ class USD:
 
     def USD2BRL(self, brl):
         try:
-            value_buy = brl * self.values[len(self.values) - 1]
-            value_sell = brl * self.values[len(self.values) - 2]
+            value_buy = brl * self.values[len(self.values) - 2]
+            value_sell = brl * self.values[len(self.values) - 1]
             conversion = {"Value of conversion (buy)": value_buy, "Value of conversion (sell)": value_sell}
             return conversion
         except IndexError:
@@ -79,8 +79,8 @@ class USD:
 
     def BRL2USD(self, usd):
         try:
-            value_buy = usd / self.values[len(self.values) - 1]
-            value_sell = usd/ self.values[len(self.values) - 2]
+            value_buy = usd / self.values[len(self.values) - 2]
+            value_sell = usd/ self.values[len(self.values) - 1]
             conversion = {"Value of conversion (buy)": value_buy, "Value of conversion (sell)": value_sell}
             return conversion
         except IndexError:
@@ -91,28 +91,3 @@ class USD:
             slice_list = self.values[item:item + 3]
             temp_dict = dict(zip(temp_list, slice_list))
             self.list_dict.append(temp_dict)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
